@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Baking AI — One bake. Six magazine spreads.</title>
+<meta name="description" content="Snap an ugly photo or type a name. Baking AI writes the recipe, adapts it to your kitchen, and plates it six different ways. Free on iOS." />
+
+<meta property="og:title" content="Baking AI — One bake. Six magazine spreads." />
+<meta property="og:description" content="Snap a photo or type a name. Baking AI writes the recipe, adapts it to your kitchen, and plates it six different ways." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bakingai.co" />
+<meta property="og:image" content="https://bakingai.co/images/format-1-hero.jpeg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Baking AI — One bake. Six magazine spreads." />
+<meta name="twitter:description" content="Snap a photo or type a name. Baking AI writes the recipe, adapts it to your kitchen, and plates it six different ways." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F4C0D1'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%2372243E'%3E%F0%9F%A7%81%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --pink-50: #FBEAF0;
+  --pink-100: #F4C0D1;
+  --pink-300: #ED93B1;
+  --pink-500: #D4537E;
+  --pink-700: #993556;
+  --pink-900: #4B1528;
+
+  --amber-50: #FAEEDA;
+  --amber-100: #FAC775;
+  --amber-300: #EF9F27;
+  --amber-700: #854F0B;
+
+  --coral-100: #F5C4B3;
+  --coral-300: #F0997B;
+  --coral-500: #D85A30;
+  --coral-700: #993C1D;
+
+  --green-100: #C0DD97;
+  --green-700: #27500A;
+
+  --purple-100: #CECBF6;
+  --purple-700: #3C3489;
+
+  --teal-100: #9FE1CB;
+  --teal-700: #085041;
+
+  --cream: #FFFBF5;
+  --ink: #2A1810;
+  --ink-soft: #6B5D54;
+  --ink-light: #9D9089;
+  --border: rgba(42, 24, 16, 0.08);
+  --border-strong: rgba(42, 24, 16, 0.16);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ====== NAVIGATION ====== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 251, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--pink-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+.nav-links a { transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.btn-primary {
+  background: var(--coral-500);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-primary:hover { background: var(--coral-700); transform: translateY(-1px); }
+.btn-ghost {
+  background: white;
+  color: var(--ink);
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--border-strong);
+  transition: all 0.2s;
+}
+.btn-ghost:hover { background: var(--cream); border-color: var(--ink); }
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+}
+
+/* ====== HERO ====== */
+.hero {
+  position: relative;
+  padding: 80px 0 100px;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 800px 500px at 20% 0%, var(--pink-50) 0%, transparent 60%),
+    radial-gradient(ellipse 700px 500px at 80% 30%, var(--amber-50) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 400px at 50% 100%, var(--pink-50) 0%, transparent 60%);
+  z-index: -1;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  color: var(--pink-700);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+  animation: fadeUp 0.7s ease-out;
+}
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--coral-500);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+  animation: fadeUp 0.8s ease-out 0.1s both;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--pink-500);
+  font-feature-settings: "ss01";
+}
+.hero p {
+  font-size: clamp(17px, 1.6vw, 20px);
+  color: var(--ink-soft);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.5;
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+.btn-large {
+  padding: 14px 28px;
+  font-size: 15px;
+  border-radius: 999px;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== FORMAT GRID (HERO) ====== */
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+  animation: fadeUp 1s ease-out 0.4s both;
+}
+.format-tile {
+  aspect-ratio: 4/5;
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.format-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.format-tile > span {
+  position: relative;
+  z-index: 1;
+}
+.format-tile:hover { transform: translateY(-4px) rotate(-1deg); }
+.format-tile:nth-child(even):hover { transform: translateY(-4px) rotate(1deg); }
+.format-tag {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  align-self: flex-start;
+  backdrop-filter: blur(4px);
+}
+.format-name {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  align-self: center;
+  backdrop-filter: blur(4px);
+}
+.tile-1 { background: var(--pink-100); }
+.tile-2 { background: var(--coral-100); }
+.tile-3 { background: var(--amber-100); }
+.tile-4 { background: var(--green-100); }
+.tile-5 { background: var(--purple-100); }
+.tile-6 { background: var(--teal-100); }
+.tile-1 .format-tag, .tile-1 .format-name { color: var(--pink-900); }
+.tile-2 .format-tag, .tile-2 .format-name { color: var(--coral-700); }
+.tile-3 .format-tag, .tile-3 .format-name { color: var(--amber-700); }
+.tile-4 .format-tag, .tile-4 .format-name { color: var(--green-700); }
+.tile-5 .format-tag, .tile-5 .format-name { color: var(--purple-700); }
+.tile-6 .format-tag, .tile-6 .format-name { color: var(--teal-700); }
+
+@media (max-width: 720px) {
+  .format-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ====== TRANSFORMATION WIDGET ====== */
+.transform-widget {
+  display: grid;
+  grid-template-columns: 1fr auto 1.4fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+  animation: fadeUp 1s ease-out 0.4s both;
+}
+.transform-before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.transform-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+.transform-photo {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4/5;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  transform: rotate(-2deg);
+  background: #2a1810;
+}
+.transform-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 6px white;
+  z-index: 1;
+  pointer-events: none;
+}
+.transform-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.transform-btn {
+  background: var(--coral-500);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  transition: all 0.2s;
+  box-shadow: 0 6px 20px rgba(216, 90, 48, 0.3);
+  animation: btnWobble 2.6s ease-in-out 1.2s infinite;
+  transform-origin: center bottom;
+}
+.transform-btn:hover:not(.is-generating),
+.transform-widget.is-generating .transform-btn,
+.transform-widget.is-done .transform-btn {
+  animation: none;
+}
+@keyframes btnWobble {
+  0%, 60%, 100% { transform: rotate(0deg) scale(1); }
+  65% { transform: rotate(-3deg) scale(1.04); }
+  70% { transform: rotate(3deg) scale(1.04); }
+  75% { transform: rotate(-2deg) scale(1.03); }
+  80% { transform: rotate(2deg) scale(1.02); }
+  85% { transform: rotate(-1deg) scale(1.01); }
+  90% { transform: rotate(0deg) scale(1); }
+}
+.transform-btn:hover:not(.is-generating) {
+  background: var(--coral-700);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(216, 90, 48, 0.4);
+}
+.transform-btn-icon {
+  font-size: 16px;
+  display: inline-block;
+}
+.transform-widget.is-generating .transform-btn { background: var(--ink-soft); cursor: wait; }
+.transform-widget.is-generating .transform-btn-icon { animation: spin 1s linear infinite; }
+.transform-widget.is-done .transform-btn-icon { display: inline-block; }
+
+.transform-arrow {
+  font-size: 28px;
+  color: var(--pink-500);
+  font-weight: 300;
+  animation: arrowPulse 2s ease-in-out infinite;
+}
+@keyframes arrowPulse {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(6px); opacity: 1; }
+}
+
+.transform-after {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.transform-tile {
+  aspect-ratio: 4/5;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background: var(--pink-50);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  /* Start hidden — JS will reveal */
+  opacity: 0;
+  transform: scale(0.85) translateY(20px);
+  filter: blur(8px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+}
+.transform-tile.is-revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+.transform-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.transform-tile-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255,255,255,0.95);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink);
+  backdrop-filter: blur(4px);
+}
+
+/* Sparkle effect on reveal */
+.transform-tile.is-revealed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, rgba(244, 192, 209, 0.6) 0%, transparent 60%);
+  opacity: 0;
+  animation: sparkle 0.8s ease-out;
+  pointer-events: none;
+}
+@keyframes sparkle {
+  0% { opacity: 0; transform: scale(0.5); }
+  40% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+@media (max-width: 900px) {
+  .transform-widget {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .transform-arrow {
+    transform: rotate(90deg);
+  }
+  @keyframes arrowPulse {
+    0%, 100% { transform: rotate(90deg) translateX(0); opacity: 0.6; }
+    50% { transform: rotate(90deg) translateX(6px); opacity: 1; }
+  }
+  .transform-photo { max-width: 240px; }
+}
+@media (max-width: 520px) {
+  .transform-after { grid-template-columns: repeat(2, 1fr); }
+}
+
+.reroll-hint {
+  margin-top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--pink-700);
+  animation: fadeUp 0.8s ease-out 0.5s both;
+}
+.reroll-icon {
+  display: inline-block;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ====== SECTIONS ====== */
+section { padding: 100px 0; }
+.section-header { text-align: center; margin-bottom: 64px; }
+.section-eyebrow {
+  display: inline-block;
+  color: var(--pink-500);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 56px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+.section-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--pink-500);
+}
+.section-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ====== FORMATS DETAIL ====== */
+.formats-detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.format-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+.format-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink-100);
+  box-shadow: 0 12px 32px rgba(212, 83, 126, 0.08);
+}
+.format-preview {
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  background: var(--pink-50);
+}
+.format-preview img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+.format-card:hover .format-preview img {
+  transform: scale(1.04);
+}
+.format-card h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.format-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.format-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--pink-50);
+  color: var(--pink-700);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .formats-detail { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .formats-detail { grid-template-columns: 1fr; }
+}
+
+/* ====== PILLARS ====== */
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.pillar {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  border: 1px solid var(--border);
+}
+.pillar.express { background: linear-gradient(160deg, var(--pink-50) 0%, white 70%); }
+.pillar.bake { background: linear-gradient(160deg, var(--amber-50) 0%, white 70%); }
+.pillar-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.pillar.express .pillar-tag { background: var(--pink-100); color: var(--pink-900); }
+.pillar.bake .pillar-tag { background: var(--amber-100); color: var(--amber-700); }
+.pillar h3 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.pillar > p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.pillar-demo {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid var(--border);
+}
+.format-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.format-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid var(--border-strong);
+  background: white;
+  transition: all 0.2s;
+}
+.format-pill.active {
+  background: var(--pink-500);
+  color: white;
+  border-color: var(--pink-500);
+}
+.pillar-stat {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--pink-700);
+}
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.toggle-row:last-child { border-bottom: none; }
+.toggle {
+  width: 38px;
+  height: 22px;
+  border-radius: 999px;
+  background: #D3D1C7;
+  position: relative;
+  transition: background 0.2s;
+}
+.toggle.on { background: var(--pink-500); }
+.toggle::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s;
+}
+.toggle.on::after { left: 18px; }
+
+@media (max-width: 800px) {
+  .pillars { grid-template-columns: 1fr; }
+}
+
+/* ====== STEPS ====== */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--pink-100);
+  color: var(--pink-900);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.step h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.step p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+@media (max-width: 800px) {
+  .steps { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ====== PRICING ====== */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.plan {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+.plan:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.05); }
+.plan.featured {
+  border: 2px solid var(--pink-500);
+  position: relative;
+  background: linear-gradient(160deg, var(--pink-50) 0%, white 50%);
+}
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pink-500);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.plan-name {
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.plan-price span {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+.plan-desc {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+  min-height: 36px;
+  line-height: 1.4;
+}
+.plan-features {
+  list-style: none;
+  margin-bottom: 28px;
+  font-size: 14px;
+}
+.plan-features li {
+  padding: 8px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.plan-features li::before {
+  content: '✓';
+  color: var(--pink-500);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.plan-features li.highlight {
+  color: var(--pink-700);
+  font-weight: 500;
+}
+.plan-cta {
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.plan-cta.primary { background: var(--coral-500); color: white; }
+.plan-cta.primary:hover { background: var(--coral-700); }
+.plan-cta.secondary {
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--border-strong);
+}
+.plan-cta.secondary:hover { border-color: var(--ink); }
+
+@media (max-width: 800px) {
+  .pricing { grid-template-columns: 1fr; }
+}
+
+.billing-toggle {
+  display: inline-flex;
+  background: white;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  margin: 0 auto 40px;
+  gap: 4px;
+  justify-content: center;
+}
+.billing-toggle-wrap {
+  text-align: center;
+}
+.billing-option {
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  font-family: inherit;
+  background: transparent;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.billing-option:hover { color: var(--ink); }
+.billing-option.active {
+  background: var(--ink);
+  color: white;
+}
+.billing-option.active:hover { color: white; }
+.billing-save {
+  background: var(--pink-100);
+  color: var(--pink-900);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.billing-option.active .billing-save {
+  background: var(--pink-500);
+  color: white;
+}
+
+.single-plan-wrap {
+  display: flex;
+  justify-content: center;
+}
+.single-plan {
+  background: white;
+  border: 2px solid var(--pink-500);
+  border-radius: 24px;
+  padding: 44px 40px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(160deg, var(--pink-50) 0%, white 60%);
+}
+.single-plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pink-500);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.single-plan-pricing {
+  margin-bottom: 32px;
+}
+.single-plan-pricing[hidden] { display: none; }
+.single-plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+.price-currency {
+  font-size: 32px;
+  color: var(--ink-soft);
+}
+.price-number {
+  font-size: 72px;
+  line-height: 1;
+}
+.price-period {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-left: 4px;
+}
+.single-plan-billed {
+  font-size: 14px;
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.price-strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--pink-500);
+  text-decoration-thickness: 2px;
+  color: var(--ink-light);
+  font-size: 16px;
+}
+.price-savings {
+  color: var(--pink-700);
+  font-weight: 500;
+  font-size: 14px;
+}
+.single-plan-features {
+  list-style: none;
+  margin: 0 auto 32px;
+  font-size: 15px;
+  text-align: left;
+  max-width: 320px;
+}
+.single-plan-features li {
+  padding: 10px 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.single-plan-features li::before {
+  content: '✓';
+  color: var(--pink-500);
+  font-weight: 600;
+  flex-shrink: 0;
+  font-size: 16px;
+}
+.single-plan-features li.highlight {
+  color: var(--pink-700);
+  font-weight: 500;
+}
+.single-plan-cta {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 16px;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+.single-plan-foot {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.credits-callout {
+  background: white;
+  border: 1px solid var(--pink-100);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.credits-number {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--pink-500);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.credits-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+}
+.credits-explain {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.topups {
+  margin-top: 56px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.topups-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.topups-header h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.topups-header p {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.topups-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.topup {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s;
+}
+.topup:hover {
+  border-color: var(--pink-300);
+  transform: translateY(-2px);
+}
+.topup.featured {
+  border: 2px solid var(--pink-500);
+  background: linear-gradient(160deg, var(--pink-50) 0%, white 70%);
+}
+.topup-tag {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pink-500);
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.topup-credits {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.topup-price {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--pink-500);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.topup-note {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
+@media (max-width: 560px) {
+  .topups-grid { grid-template-columns: 1fr; }
+}
+
+/* ==== 2-tier pricing ==== */
+.tier-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.tier-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 36px 32px;
+  position: relative;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.tier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+}
+.tier-card.featured {
+  border: 2px solid var(--pink-500);
+  background: linear-gradient(160deg, var(--pink-50) 0%, white 60%);
+}
+.tier-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pink-500);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.tier-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.tier-tagline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+  min-height: 20px;
+}
+.tier-pricing { margin-bottom: 20px; }
+.tier-pricing[hidden] { display: none; }
+.tier-price {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+.tier-currency {
+  font-size: 24px;
+  color: var(--ink-soft);
+}
+.tier-amount {
+  font-size: 52px;
+  line-height: 1;
+}
+.tier-period {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-left: 4px;
+}
+.tier-billed {
+  font-size: 13px;
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 36px;
+}
+.tier-strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--pink-500);
+  text-decoration-thickness: 1.5px;
+  color: var(--ink-light);
+  font-size: 13px;
+}
+.tier-savings {
+  color: var(--pink-700);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.tier-credits {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.tier-credits-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--pink-500);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.tier-credits-label {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.tier-features {
+  list-style: none;
+  font-size: 14px;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+.tier-features li {
+  padding: 8px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.tier-features li::before {
+  content: '✓';
+  color: var(--pink-500);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.tier-features li.highlight {
+  color: var(--pink-700);
+  font-weight: 500;
+}
+.tier-cta {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  font-size: 15px;
+}
+.tier-foot {
+  max-width: 600px;
+  margin: 24px auto 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .tier-grid { grid-template-columns: 1fr; max-width: 440px; }
+}
+@media (max-width: 560px) {
+  .tier-card { padding: 32px 24px; }
+  .tier-amount { font-size: 44px; }
+}
+
+@media (max-width: 560px) {
+  .single-plan { padding: 36px 24px; }
+  .price-number { font-size: 60px; }
+  .billing-option { padding: 9px 16px; font-size: 13px; }
+}
+
+/* ====== TESTIMONIALS ====== */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.quote {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+.quote-stars {
+  color: var(--amber-300);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.quote p {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.45;
+  margin-bottom: 20px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.quote-author { display: flex; align-items: center; gap: 12px; }
+.quote-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+.quote-name { font-size: 14px; font-weight: 500; }
+.quote-role { font-size: 12px; color: var(--ink-soft); }
+
+@media (max-width: 800px) {
+  .testimonials { grid-template-columns: 1fr; }
+}
+
+/* ====== FAQ ====== */
+.faq { max-width: 720px; margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+  cursor: pointer;
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.faq-icon {
+  font-size: 24px;
+  color: var(--pink-500);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.faq-item.open .faq-a {
+  max-height: 200px;
+  margin-top: 12px;
+}
+
+/* ====== FINAL CTA / WAITLIST ====== */
+.final {
+  background: linear-gradient(160deg, var(--amber-50) 0%, var(--pink-50) 100%);
+  border-radius: 32px;
+  padding: 72px 32px;
+  text-align: center;
+  margin: 60px 0;
+}
+.final h2 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.final h2 em { font-style: italic; color: var(--pink-500); }
+.final > p {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-bottom: 32px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 8px;
+  max-width: 440px;
+  margin: 0 auto;
+  background: white;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+.waitlist-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-family: inherit;
+  background: transparent;
+  color: var(--ink);
+}
+.waitlist-form input::placeholder { color: var(--ink-light); }
+.waitlist-form button {
+  background: var(--coral-500);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.waitlist-form button:hover { background: var(--coral-700); }
+.waitlist-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.waitlist-success {
+  display: none;
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  max-width: 440px;
+  margin: 0 auto;
+  border: 1px solid var(--green-100);
+}
+.waitlist-success.show { display: block; }
+.waitlist-success h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--green-700);
+}
+.waitlist-success p { font-size: 14px; color: var(--ink-soft); }
+
+@media (max-width: 560px) {
+  .waitlist-form { flex-direction: column; border-radius: 18px; padding: 12px; gap: 10px; }
+  .waitlist-form input { padding: 12px 16px; }
+  .waitlist-form button { width: 100%; padding: 14px; }
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  padding: 40px 0 60px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.footer-links { display: flex; gap: 24px; }
+.footer-links a:hover { color: var(--ink); }
+
+/* ====== ACCESSIBILITY ====== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+:focus-visible {
+  outline: 2px solid var(--pink-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">🧁</div>
+      Baking AI
+    </a>
+    <nav class="nav-links">
+      <a href="#formats">Formats</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#waitlist" class="btn-primary">Join waitlist</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">
+      <span class="hero-eyebrow-dot"></span>
+      Launching soon on iOS
+    </span>
+    <h1>One bake.<br><em>Six magazine spreads.</em></h1>
+    <p>Snap an ugly photo or type a name. Baking AI writes the recipe, adapts it to your kitchen, and plates it six different ways. Re-roll till you find the one.</p>
+    <div class="hero-ctas">
+      <a href="#waitlist" class="btn-primary btn-large">Join the waitlist</a>
+      <a href="#formats" class="btn-ghost btn-large">See the formats</a>
+    </div>
+
+    <div class="transform-widget" id="transform-widget">
+      <div class="transform-before">
+        <span class="transform-label">Your ugly snap</span>
+        <div class="transform-photo">
+          <img src="images/before-photo.jpeg" alt="Blurry phone photo of a cinnamon roll on a black plate" />
+        </div>
+        <button class="transform-btn" id="transform-btn" type="button">
+          <span class="transform-btn-icon">✨</span>
+          <span class="transform-btn-text">Generate 6 spreads</span>
+        </button>
+      </div>
+
+      <div class="transform-arrow" aria-hidden="true">→</div>
+
+      <div class="transform-after" id="transform-after" aria-label="Six AI-generated format previews">
+        <div class="transform-tile" data-delay="0">
+          <img src="images/format-1-hero.jpeg" alt="Hero shot" />
+          <span class="transform-tile-tag">1 · Hero</span>
+        </div>
+        <div class="transform-tile" data-delay="180">
+          <img src="images/format-3-hero-card.jpeg" alt="Hero card" />
+          <span class="transform-tile-tag">2 · Hero card</span>
+        </div>
+        <div class="transform-tile" data-delay="360">
+          <img src="images/format-4-knolling.jpeg" alt="Knolling" />
+          <span class="transform-tile-tag">3 · Knolling</span>
+        </div>
+        <div class="transform-tile" data-delay="540">
+          <img src="images/format-2-recipe-card.jpeg" alt="Recipe card" />
+          <span class="transform-tile-tag">4 · Recipe card</span>
+        </div>
+        <div class="transform-tile" data-delay="720">
+          <img src="images/format-5-steps.jpeg" alt="Step guide" />
+          <span class="transform-tile-tag">5 · Step guide</span>
+        </div>
+        <div class="transform-tile" data-delay="900">
+          <img src="images/format-6-overview.jpeg" alt="Overview" />
+          <span class="transform-tile-tag">6 · Overview</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reroll-hint">
+      <span class="reroll-icon">↻</span>
+      Don't love it? Re-roll. And again. And again.
+    </div>
+  </div>
+</section>
+
+<section id="formats">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Six formats, one bake</span>
+      <h2 class="section-title">Pick a format.<br>Or <em>generate all six.</em></h2>
+      <p class="section-sub">Every bake becomes six different shots — each tuned for a different moment. Cooking, sharing, printing, posting, gifting.</p>
+    </div>
+
+    <div class="formats-detail">
+      <div class="format-card">
+        <div class="format-preview">
+          <img src="images/format-1-hero.jpeg" alt="Hero shot of a caramel cinnamon roll on a black plate" loading="lazy" />
+        </div>
+        <h3><span class="format-num">1</span> Hero image</h3>
+        <p>The dream shot. Magazine-cover quality. The version that makes you actually want to bake it.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-preview">
+          <img src="images/format-3-hero-card.jpeg" alt="Hero card with dish name and tagline overlaid" loading="lazy" />
+        </div>
+        <h3><span class="format-num">2</span> Hero card</h3>
+        <p>Same dream shot, with the dish name baked in. Instagram-ready, no editing.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-preview">
+          <img src="images/format-4-knolling.jpeg" alt="Flat-lay of all the recipe ingredients" loading="lazy" />
+        </div>
+        <h3><span class="format-num">3</span> Ingredients knolling</h3>
+        <p>The Pinterest-bait flat-lay. Every ingredient laid out, perfectly spaced, perfectly lit.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-preview">
+          <img src="images/format-2-recipe-card.jpeg" alt="Recipe card with the dish and labeled ingredients" loading="lazy" />
+        </div>
+        <h3><span class="format-num">4</span> Recipe card</h3>
+        <p>Final dish surrounded by every ingredient, labeled. The printable, gift-able, stuck-on-the-fridge version.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-preview">
+          <img src="images/format-5-steps.jpeg" alt="Six-step visual guide for making the recipe" loading="lazy" />
+        </div>
+        <h3><span class="format-num">5</span> Step-by-step</h3>
+        <p>The whole process in six visual beats. Perfect for Reels, Stories, or just remembering.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-preview">
+          <img src="images/format-6-overview.jpeg" alt="Cookbook-style overview with ingredients and numbered steps" loading="lazy" />
+        </div>
+        <h3><span class="format-num">6</span> Overview</h3>
+        <p>Final dish, ingredients, and steps in one page. Looks like it came from a published cookbook.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Two reasons people love it</span>
+      <h2 class="section-title">Made to share.<br><em>Built to bake.</em></h2>
+      <p class="section-sub">Two killer features. Pick the one you came for — most people end up addicted to both.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar express">
+        <span class="pillar-tag">Express</span>
+        <h3>Six ways to show off.</h3>
+        <p>Generate the bake in every format. Re-roll till it's perfect. Save the ones you love.</p>
+        <div class="pillar-demo">
+          <div style="margin-bottom: 12px; font-size: 12px; color: var(--ink-soft);">Tap a format to generate</div>
+          <div class="format-pills">
+            <span class="format-pill active">Hero</span>
+            <span class="format-pill">Hero card</span>
+            <span class="format-pill">Knolling</span>
+            <span class="format-pill">Recipe card</span>
+            <span class="format-pill">Steps</span>
+            <span class="format-pill">Overview</span>
+          </div>
+          <div class="pillar-stat">
+            <span>↻ Generated 11 times this week</span>
+            <span>tap to re-roll</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar bake">
+        <span class="pillar-tag">Bake</span>
+        <h3>Recipes for your kitchen.</h3>
+        <p>No stand mixer? Convection only? Gluten-free? The recipe adapts itself instantly.</p>
+        <div class="pillar-demo">
+          <div class="toggle-row"><span>No stand mixer</span><div class="toggle on"></div></div>
+          <div class="toggle-row"><span>Gluten-free</span><div class="toggle on"></div></div>
+          <div class="toggle-row"><span>Convection oven</span><div class="toggle"></div></div>
+          <div class="toggle-row"><span>Halve the recipe</span><div class="toggle"></div></div>
+          <div class="toggle-row"><span>Metric units</span><div class="toggle on"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">How it works</span>
+      <h2 class="section-title">Three taps to <em>the whole package.</em></h2>
+      <p class="section-sub">No browsing 40 blog intros. No converting cups to grams. Baking AI does the boring parts.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Drop a hint</h3>
+        <p>Name, photo, or both. Even a vague memory works — "the brownie my aunt made."</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Pick your format</h3>
+        <p>Hero, card, knolling, recipe, steps, or overview. Generate one or all six.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Re-roll till you love it</h3>
+        <p>Don't like the angle, the lighting, the styling? Tap again. New version, every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Pricing</span>
+      <h2 class="section-title">Two plans.<br><em>Pay your way.</em></h2>
+      <p class="section-sub">Every image you generate uses 1 credit. All six formats unlocked on both plans. Save big with annual — and top up any time.</p>
+    </div>
+
+    <div class="billing-toggle-wrap">
+      <div class="billing-toggle" role="tablist" aria-label="Billing period">
+        <button class="billing-option" role="tab" aria-selected="false" data-billing="monthly">Monthly</button>
+        <button class="billing-option active" role="tab" aria-selected="true" data-billing="annual">
+          Annual
+          <span class="billing-save">save up to 40%</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tier-grid">
+
+      <div class="tier-card">
+        <p class="tier-name">Hobbyist</p>
+        <p class="tier-tagline">For the weekend baker.</p>
+
+        <div class="tier-pricing tier-monthly" hidden>
+          <div class="tier-price">
+            <span class="tier-currency">$</span><span class="tier-amount">15.99</span><span class="tier-period">/mo</span>
+          </div>
+          <p class="tier-billed">Billed monthly</p>
+        </div>
+
+        <div class="tier-pricing tier-annual">
+          <div class="tier-price">
+            <span class="tier-currency">$</span><span class="tier-amount">9.99</span><span class="tier-period">/mo</span>
+          </div>
+          <p class="tier-billed">
+            <span class="tier-strike">$15.99/mo</span>
+            <span class="tier-savings">$119.88 billed yearly · save 38%</span>
+          </p>
+        </div>
+
+        <div class="tier-credits">
+          <span class="tier-credits-num">50</span>
+          <span class="tier-credits-label">credits / month</span>
+        </div>
+
+        <ul class="tier-features">
+          <li>All six image formats</li>
+          <li>Unlimited recipes &amp; saved cookbook</li>
+          <li>HD resolution downloads</li>
+          <li>Full kitchen profile &amp; adaptation</li>
+          <li>Top-up credits any time</li>
+        </ul>
+
+        <a href="#waitlist" class="plan-cta secondary tier-cta">Join the waitlist</a>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="tier-badge">Most popular</div>
+        <p class="tier-name">Creator</p>
+        <p class="tier-tagline">For the baker who can't stop re-rolling.</p>
+
+        <div class="tier-pricing tier-monthly" hidden>
+          <div class="tier-price">
+            <span class="tier-currency">$</span><span class="tier-amount">29.99</span><span class="tier-period">/mo</span>
+          </div>
+          <p class="tier-billed">Billed monthly</p>
+        </div>
+
+        <div class="tier-pricing tier-annual">
+          <div class="tier-price">
+            <span class="tier-currency">$</span><span class="tier-amount">17.99</span><span class="tier-period">/mo</span>
+          </div>
+          <p class="tier-billed">
+            <span class="tier-strike">$29.99/mo</span>
+            <span class="tier-savings">$215.88 billed yearly · save 40%</span>
+          </p>
+        </div>
+
+        <div class="tier-credits">
+          <span class="tier-credits-num">100</span>
+          <span class="tier-credits-label">credits / month</span>
+        </div>
+
+        <ul class="tier-features">
+          <li class="highlight">Everything in Hobbyist</li>
+          <li class="highlight">Double the credits</li>
+          <li>Priority generation</li>
+          <li>Early access to new formats</li>
+          <li>Cookbook export (PDF)</li>
+        </ul>
+
+        <a href="#waitlist" class="plan-cta primary tier-cta">Join the waitlist</a>
+      </div>
+
+    </div>
+
+    <p class="tier-foot">1 credit = 1 image. A full 6-format recipe uses 6 credits. Re-rolls are 1 each. Start with 10 free credits when we launch — no card to join the waitlist.</p>
+
+    <div class="topups">
+      <div class="topups-header">
+        <h3>Running low? Top-ups never expire.</h3>
+        <p>Buy more credits any time inside the app. Use them whenever — they don't reset monthly.</p>
+      </div>
+      <div class="topups-grid">
+        <div class="topup">
+          <div class="topup-credits">+20 credits</div>
+          <div class="topup-price">$4.99</div>
+          <div class="topup-note">A little extra for the weekend</div>
+        </div>
+        <div class="topup featured">
+          <div class="topup-tag">Best value</div>
+          <div class="topup-credits">+75 credits</div>
+          <div class="topup-price">$14.99</div>
+          <div class="topup-note">For when you can't stop re-rolling</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Loved by bakers</span>
+      <h2 class="section-title">It's mildly addictive.<br><em>We're sorry.</em></h2>
+      <p class="section-sub">A few early reactions from our TestFlight beta.</p>
+    </div>
+
+    <div class="testimonials">
+      <div class="quote">
+        <div class="quote-stars">★★★★★</div>
+        <p>"I generated the hero card eleven times before I settled on one. My husband thinks I have a problem. I don't think I have a problem."</p>
+        <div class="quote-author">
+          <div class="quote-avatar" style="background: var(--pink-100); color: var(--pink-900);">SA</div>
+          <div>
+            <div class="quote-name">Sara A.</div>
+            <div class="quote-role">Home baker, Brooklyn</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote">
+        <div class="quote-stars">★★★★★</div>
+        <p>"The knolling shots alone replaced three apps in my food blog workflow. I haven't opened my DSLR in two weeks."</p>
+        <div class="quote-author">
+          <div class="quote-avatar" style="background: var(--amber-100); color: var(--amber-700);">MJ</div>
+          <div>
+            <div class="quote-name">Marcus J.</div>
+            <div class="quote-role">Food blogger, Berlin</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote">
+        <div class="quote-stars">★★★★★</div>
+        <p>"I use the step-by-step format for Reels and the overview for menu mock-ups. It does the work of a whole styling team."</p>
+        <div class="quote-author">
+          <div class="quote-avatar" style="background: var(--green-100); color: var(--green-700);">LP</div>
+          <div>
+            <div class="quote-name">Lina P.</div>
+            <div class="quote-role">Bakery owner, Lisbon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">FAQ</span>
+      <h2 class="section-title">Things people ask.</h2>
+      <p class="section-sub">If you don't see your question, drop it in the waitlist form below.</p>
+    </div>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Can I really keep re-rolling the images?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes — and most people do. Every re-roll is a fresh take on the same recipe: different angle, different styling, different mood. Each re-roll uses 1 credit; your monthly plan refills automatically, and top-ups never expire.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do credits work?<span class="faq-icon">+</span></div>
+        <div class="faq-a">1 credit = 1 image generation. Generating a full recipe with all six formats uses 6 credits. Each re-roll of a single format uses 1. Hobbyist gets 50 credits a month, Creator gets 100. Credits reset every billing cycle. Top-up credits never expire — buy them any time inside the app.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are the recipe photos real?<span class="faq-icon">+</span></div>
+        <div class="faq-a">No — they're AI-generated to match your recipe. Think of them as a target to bake toward, not a guarantee. We're clear about this in the app.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are the recipes actually tested?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Recipes are AI-generated using a model trained on tested baking ratios. They're reliable for standard bakes — treat exotic combinations as a starting point. Your taste test is the final word.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I use the images commercially?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Personal use is included with every subscription. For commercial use — food blogs, bakery menus, packaging — reach out to hello@bakingai.co and we'll sort out a licensing arrangement that works for you.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What kitchens does Baking AI adapt to?<span class="faq-icon">+</span></div>
+        <div class="faq-a">You set a profile once — tools you own, oven type, units, dietary needs, skill level — and every recipe is generated to fit it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is it on Android or web?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Not yet — iOS only at launch. Android is on the roadmap. Drop your email below to be notified.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="waitlist">
+  <div class="container">
+    <div class="final">
+      <h2>One bake. Six spreads.<br><em>Re-roll till it's perfect.</em></h2>
+      <p>Join the waitlist and we'll email you the moment Baking AI hits the App Store.</p>
+
+      <form class="waitlist-form" id="waitlist-form" action="REPLACE_WITH_YOUR_FORM_ENDPOINT" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" />
+        <button type="submit">Join the waitlist</button>
+      </form>
+      <p class="waitlist-note">Free to start when we launch. No spam, we promise.</p>
+
+      <div class="waitlist-success" id="waitlist-success">
+        <h3>You're in 🧁</h3>
+        <p>We'll email you the moment Baking AI lands on the App Store. Until then, keep dreaming up bakes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer container">
+  <div class="logo">
+    <div class="logo-mark">🧁</div>
+    Baking AI
+  </div>
+  <div class="footer-links">
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="mailto:hello@bakingai.co">Support</a>
+    <a href="https://twitter.com/bakingai">@bakingai</a>
+  </div>
+  <div>© 2026 Baking AI</div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+
+// Transformation widget
+(function() {
+  const widget = document.getElementById('transform-widget');
+  const btn = document.getElementById('transform-btn');
+  const btnText = btn.querySelector('.transform-btn-text');
+  const tiles = document.querySelectorAll('.transform-tile');
+  let isAnimating = false;
+
+  function reset() {
+    tiles.forEach(tile => tile.classList.remove('is-revealed'));
+  }
+
+  function generate() {
+    if (isAnimating) return;
+    isAnimating = true;
+    widget.classList.add('is-generating');
+    btn.classList.remove('is-wobbling');
+    btnText.textContent = 'Generating...';
+    reset();
+
+    // Brief "thinking" delay before tiles start appearing
+    setTimeout(() => {
+      widget.classList.remove('is-generating');
+      widget.classList.add('is-done');
+      btnText.textContent = 'Generate again';
+
+      tiles.forEach(tile => {
+        const delay = parseInt(tile.dataset.delay) || 0;
+        setTimeout(() => tile.classList.add('is-revealed'), delay);
+      });
+
+      // Mark animation done after the last tile appears
+      const lastDelay = Math.max(...Array.from(tiles).map(t => parseInt(t.dataset.delay) || 0));
+      setTimeout(() => { isAnimating = false; }, lastDelay + 600);
+    }, 700);
+  }
+
+  btn.addEventListener('click', generate);
+})();
+
+document.querySelectorAll('.billing-option').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.billing;
+    document.querySelectorAll('.billing-option').forEach(b => {
+      const isActive = b === btn;
+      b.classList.toggle('active', isActive);
+      b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    document.querySelectorAll('.tier-monthly').forEach(el => { el.hidden = (target !== 'monthly'); });
+    document.querySelectorAll('.tier-annual').forEach(el => { el.hidden = (target !== 'annual'); });
+  });
+});
+
+const form = document.getElementById('waitlist-form');
+const success = document.getElementById('waitlist-success');
+form.addEventListener('submit', async (e) => {
+  if (form.action.includes('REPLACE_WITH_YOUR_FORM_ENDPOINT')) {
+    e.preventDefault();
+    form.style.display = 'none';
+    success.classList.add('show');
+    return;
+  }
+});
+</script>
+
+</body>
+</html>
