@@ -1475,6 +1475,12 @@ section { padding: 100px 0; }
   .waitlist-form button { width: 100%; padding: 14px; }
 }
 
+.beehiiv-wrap {
+  max-width: 480px;
+  margin: 0 auto 14px;
+  min-height: 80px;
+}
+
 /* ====== FOOTER ====== */
 .footer {
   padding: 40px 0 60px;
@@ -1941,16 +1947,10 @@ section { padding: 100px 0; }
       <h2>One bake. Six spreads.<br><em>Re-roll till it's perfect.</em></h2>
       <p>Join the waitlist and we'll email you the moment Baking AI hits the App Store.</p>
 
-      <form class="waitlist-form" id="waitlist-form" action="REPLACE_WITH_YOUR_FORM_ENDPOINT" method="POST">
-        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address" />
-        <button type="submit">Join the waitlist</button>
-      </form>
-      <p class="waitlist-note">Free to start when we launch. No spam, we promise.</p>
-
-      <div class="waitlist-success" id="waitlist-success">
-        <h3>You're in 🧁</h3>
-        <p>We'll email you the moment Baking AI lands on the App Store. Until then, keep dreaming up bakes.</p>
+      <div class="beehiiv-wrap">
+        <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="79cc6898-e0a4-41fd-9f6f-9d55b6944607"></script>
       </div>
+      <p class="waitlist-note">Free to start when we launch. No spam, we promise.</p>
     </div>
   </div>
 </section>
@@ -2029,17 +2029,6 @@ document.querySelectorAll('.billing-option').forEach(btn => {
     document.querySelectorAll('.tier-monthly').forEach(el => { el.hidden = (target !== 'monthly'); });
     document.querySelectorAll('.tier-annual').forEach(el => { el.hidden = (target !== 'annual'); });
   });
-});
-
-const form = document.getElementById('waitlist-form');
-const success = document.getElementById('waitlist-success');
-form.addEventListener('submit', async (e) => {
-  if (form.action.includes('REPLACE_WITH_YOUR_FORM_ENDPOINT')) {
-    e.preventDefault();
-    form.style.display = 'none';
-    success.classList.add('show');
-    return;
-  }
 });
 </script>
 
